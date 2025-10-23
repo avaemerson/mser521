@@ -1,0 +1,25 @@
+body * {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section {
+    border: solid 1px black;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 10px;
+}

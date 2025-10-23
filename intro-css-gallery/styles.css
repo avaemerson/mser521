@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body * { 
+    border: solid 1px black;
+    padding: 5px;
+} */
+
+/* Your code here */
+header {
+    background-color: rgb(200, 255, 171);
+    padding: 20px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    background-color: rgb(241, 239, 239);
+    padding: 50px;
+}
+
+section {
+    background-color: white;
+    border: solid 1px #ccc;
+    transition: all 0.5s;
+}
+
+img {
+    width: 100%;
+}
+
+section p {
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+section:hover {
+    background-color: hotpink;
+    transform: rotate(5deg);
+}
+
+@media screen and (max-width: 600px){
+    /* When the screen is less than 600px, dark green that header */
+    header {
+        background-color: rgb(92, 172, 49);
+        padding: 20px;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+} 
+

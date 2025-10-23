@@ -1,0 +1,25 @@
+
+section {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+section {
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+}
+
+/* main { */
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+/* } */
+
+
+

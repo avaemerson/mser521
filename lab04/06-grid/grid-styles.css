@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: pink;
+}
+
+.grid-container {
+    height: 100vh;
+    /* you will add addition rules for the container here  */
+}
+
+/* create your child rules here:  */
+main {
+    display: grid;
+}
+
+div {
+    border: 2px solid black;
+    /* min-height: 100px; */
+    background-color: rgb(249, 233, 235);
+}
+
+.item-2, .item-4 {
+    margin-left: auto;
+    width: 60%;
+}
+
+.item-1, .item-3, .item-5 {
+    margin-right: auto;
+    width: 60%;
+}
+
+
+
+
