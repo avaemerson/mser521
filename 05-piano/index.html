@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Number Tester</title>
+</head>
+
+<body>
+    <p>Complete this piano by adding the missing buttons and audio files.</p>
+    <header class="buttons">
+        <select id="folder">
+            <option value="scale4">Low</option>
+            <option value="scale5">High</option>
+        </select>
+        <button onclick="playLowC()">C</button>
+        <button onclick="playD()">D</button>
+        <button onclick="playE()">E</button>
+        <button onclick="playF()">F</button>
+        <button onclick="playG()">G</button>
+        <button onclick="playA()">A</button>
+        <button onclick="playB()">B</button>
+        <button onclick="playHighC()">C</button>
+    </header>
+    <main>
+        <audio></audio>
+    </main>
+</body>
+
+</html>
