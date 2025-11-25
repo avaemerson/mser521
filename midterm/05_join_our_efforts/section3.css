@@ -1,0 +1,41 @@
+#section-3 {
+  background-image: url(../images/section-3-bkg.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  padding: 120px 0;
+}
+
+#section-3 .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+#section-3 .grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  row-gap: 6rem;
+}
+
+/* TODO: Add responsive CSS here */
+
+@media screen and (max-width: 1024px) {
+  #section-3 {
+      padding: 60px 0;
+  }
+  /* TODO: Add the remaining responsive styles here */
+
+  #section-3 .container {
+    grid-template-columns: 1fr;
+  }
+
+  #section-3 .grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  #section-3 .media img {
+    height: 48px;
+  }
+}

@@ -1,0 +1,593 @@
+/* Demo-specific styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--ivory);
+  font-family: 'Bau', sans-serif;
+  display: flex;
+}
+
+/* Left Sidebar Navigation */
+.style-guide-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  border-right: 2px solid var(--button-gray);
+  padding: 30px 20px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.style-guide-nav h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--moss-green);
+  font-weight: 700;
+}
+
+.style-guide-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.style-guide-nav li {
+  margin-bottom: 10px;
+}
+
+.style-guide-nav > ul > li {
+  margin-bottom: 15px;
+}
+
+.style-guide-nav ul ul {
+  margin-top: 8px;
+  margin-left: 15px;
+  padding-left: 10px;
+  border-left: 2px solid var(--button-gray);
+}
+
+.style-guide-nav ul ul li {
+  margin-bottom: 5px;
+}
+
+.style-guide-nav a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.style-guide-nav ul ul a {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.style-guide-nav a:hover {
+  background: var(--ivory);
+  color: var(--persian-coral);
+  text-decoration: none;
+}
+
+.style-guide-nav a:active,
+.style-guide-nav a:focus {
+  background: var(--ivory);
+  color: var(--persian-coral);
+  outline: 2px solid var(--persian-coral);
+  outline-offset: 2px;
+}
+
+/* Main Content Wrapper */
+.style-guide-wrapper {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+/* Override container padding for style guide */
+.style-guide-wrapper .container {
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+/* Responsive: Adjust for tablets */
+@media (max-width: 1024px) {
+  .style-guide-nav {
+    width: 200px;
+  }
+
+  .style-guide-wrapper {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 15px;
+  }
+
+  .style-guide-wrapper .container {
+    padding: 0 15px;
+  }
+}
+
+/* Responsive: Hide sidebar on mobile */
+@media (max-width: 768px) {
+  .style-guide-nav {
+    display: none;
+  }
+
+  .style-guide-wrapper {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .style-guide-wrapper .container {
+    padding: 0 12px;
+  }
+}
+
+.demo-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: white;
+  border: 2px solid var(--button-gray);
+  border-radius: 8px;
+  scroll-margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .demo-section {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+/* .demo-section h2 {
+  margin-top: 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--button-gray);
+  color: var(--moss-green);
+  font-size: 1.8rem;
+} */
+
+.demo-item {
+  margin: 0px 0px 50px 0;
+  padding: 28px;
+  background: var(--ivory);
+  border-left: 12px solid var(--persian-coral);
+}
+
+@media (max-width: 768px) {
+  .demo-item {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-left: none;
+  }
+}
+
+.demo-item header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.demo-item > header > h3,
+.demo-item > h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--persian-coral-hover);
+  font-weight: 700;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Code snippet display */
+.code-snippet {
+  background: #282c34;
+  color: #abb2bf;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  /* margin-bottom: 15px; */
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.code-snippet pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.code-snippet code {
+  background: transparent;
+  color: #abb2bf;
+  padding: 0;
+  font-size: inherit;
+  font-family: 'Courier New', monospace;
+}
+
+.code-snippet pre code {
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Side-by-side layout for code and demo */
+.demo-with-code {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .demo-with-code {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.demo-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100px;
+  position: relative;
+}
+
+code {
+  /* background: var(--button-gray); */
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* .demo-section code {
+  background: var(--button-gray);
+} */
+
+/* ============================================
+   DEMO-SPECIFIC OVERRIDES
+   These styles override utility classes for demo purposes only.
+   They are scoped to .demo-visual to avoid affecting actual usage.
+   ============================================ */
+
+/* Button Demo Overrides */
+/* Override: Adds white background container for tertiary button demo */
+#buttons .demo-visual > div {
+  padding: 20px;
+  background: white;
+}
+
+/* Override: Positions arrow button absolutely in demo card */
+#buttons .demo-visual .btn.icon.arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Override: Creates demo card container for arrow button demo */
+#buttons .demo-visual .card {
+  padding: 20px;
+  background: white;
+  position: relative;
+  height: 100px;
+}
+
+#buttons .demo-visual .card p {
+  margin: 0;
+}
+
+/* Layout Demo Overrides */
+/* Override: Adds visual border and background to container demo */
+#layout .demo-visual .container {
+  background: var(--ivory);
+  padding: 20px;
+  border: 2px dashed var(--gray);
+}
+
+/* Override: Styles grid items */
+#layout .demo-visual .grid-two-column > div {
+  padding: 20px;
+  text-align: center;
+}
+.bg-white {
+  background: white;
+}
+/* Override: Constrains card demo width */
+#layout .demo-visual .card.demo-card-wrapper {
+  max-width: 400px;
+}
+
+/* Override: Removes default link styling from card demo */
+#layout .demo-visual .btn-container.card {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* Override: Adds background image to card media demo */
+#layout .demo-visual .card .media {
+  background-image: url(../images/card-intern.jpg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1;
+}
+
+/* Override: Adds padding to card article demo */
+#layout .demo-visual .card article {
+  padding: 1.5rem;
+}
+
+/* Override: Makes code snippet span full width for column demo */
+#layout .demo-item:has(.column-demo) .code-snippet {
+  grid-column: 1 / 3;
+}
+
+/* Override: Adds margin-top to column demo visual */
+#layout .demo-visual.column-demo {
+  margin-top: 30px;
+}
+
+/* Override: Adds border to first column */
+#layout .demo-visual .column:first-child {
+  border-right: 1px solid var(--button-gray);
+}
+
+/* Override: Styles column media placeholders */
+#layout .demo-visual .column .media {
+  background: var(--button-gray);
+  aspect-ratio: 425 / 286;
+  margin-bottom: 15px;
+}
+
+#layout .demo-visual .column .media > div {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Override: Styles media demo with background image */
+#layout .demo-visual .media.media-demo {
+  min-width: 300px;
+  max-width: 300px;
+  background-image: url(../images/card-program.jpg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 5 / 4;
+}
+
+/* Utility Demo Overrides */
+/* Override: Constrains panel demo width */
+#utilities .demo-visual .panel {
+  max-width: 600px;
+}
+
+/* Override: Adds spacing for pill demo items */
+#utilities .demo-visual .pill {
+  margin-right: 10px;
+}
+
+/* Override: Creates container for accessibility demo */
+#utilities .demo-visual > div {
+  padding: 20px;
+  background: white;
+  position: relative;
+}
+
+#utilities .demo-visual p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: var(--gray);
+}
+
+/* Pattern Demo Overrides */
+/* Override: Navigation demo container */
+#patterns .demo-visual > div:has(.navigation) {
+  position: relative;
+  background: black;
+  padding: 20px;
+}
+
+/* Override: Makes code snippet span full width for hero pattern */
+#patterns .demo-item .code-snippet {
+  grid-column: 1 / 3;
+}
+
+/* Override: Makes demo visual span full width for hero pattern */
+#patterns .demo-visual.hero-demo {
+  grid-column: 1 / 3;
+}
+
+/* Override: Styles hero demo container */
+#patterns .demo-visual .hero.hero-demo {
+  min-height: 400px;
+  max-height: 600px;
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 50px;
+  position: relative;
+}
+
+/* Override: Sets grid columns for hero demo */
+#patterns .demo-visual .hero .container.grid {
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Override: Styles hero demo heading */
+#patterns .demo-visual .hero h1.mega {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Override: Styles hero demo paragraph */
+#patterns .demo-visual .hero p.xlarge {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Override: Styles hero jump arrow */
+#patterns .demo-visual .hero .jump-arrow {
+  display: inline-block;
+  width: 26px;
+  height: 30px;
+  background: url(../images/arrow-down.svg) no-repeat;
+}
+
+/* Override: Makes card demo full width */
+#patterns .demo-visual .card.full-width {
+  width: 100%;
+}
+
+/* Override: Adds background image to card demo */
+#patterns .demo-visual .card .media.fancy-boxes {
+  background-image: url(../images/card-advocacy.jpg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1;
+}
+
+/* Override: Adds different background image to second card demo */
+#patterns .demo-visual .card.card-second .media.fancy-boxes {
+  background-image: url(../images/card-staff.jpg);
+}
+
+/* Override: Constrains icon card demo width */
+#patterns .demo-visual .icon-card-wrapper {
+  max-width: 500px;
+}
+
+/* Override: Styles icon card container */
+#patterns .demo-visual .btn-container.icon-card {
+  text-decoration: none;
+  color: var(--black);
+  display: block;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--button-gray);
+}
+
+/* Override: Adds margin to icon card media */
+#patterns .demo-visual .icon-card .media {
+  margin-bottom: 15px;
+}
+
+/* Override: Styles icon placeholder in icon card */
+#patterns .demo-visual .icon-card .media > div {
+  background: var(--green);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Override: Constrains text-only card demo width */
+#patterns .demo-visual .text-card-wrapper {
+  max-width: 600px;
+}
+
+/* Override: Constrains carousel card demo width */
+#patterns .demo-visual .carousel-card-wrapper {
+  max-width: 360px;
+}
+
+/* Override: Adds background image to carousel card media */
+#patterns .demo-visual .carousel-card .media.fancy-boxes {
+  background-image: url(../images/carousel-1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+/* Override: Styles carousel card article */
+#patterns .demo-visual .carousel-card article {
+  padding: 2rem;
+  position: relative;
+}
+
+/* Override: Adds margin to pill/caption container */
+#patterns .demo-visual .carousel-card article > div {
+  margin-bottom: 10px;
+}
+
+/* Override: Positions arrow button in carousel card */
+#patterns .demo-visual .carousel-card .btn.icon.arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Color Variables Demo Overrides */
+/* Override: Styles color variable demo boxes */
+#colors .demo-grid > div {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Override: Adds border to white and ivory boxes */
+#colors .demo-grid > div:first-child,
+#colors .demo-grid > div:nth-child(2) {
+  border: 2px solid var(--button-gray);
+}
+
+/* Override: Sets text color for dark backgrounds */
+#colors .demo-grid > div:nth-child(3),
+#colors .demo-grid > div:nth-child(7),
+#colors .demo-grid > div:nth-child(8) {
+  color: var(--white);
+}
+
+/* Override: Sets background colors for each variable */
+#colors .demo-grid > div:first-child {
+  background: var(--white);
+}
+
+#colors .demo-grid > div:nth-child(2) {
+  background: var(--ivory);
+}
+
+#colors .demo-grid > div:nth-child(3) {
+  background: var(--black);
+}
+
+#colors .demo-grid > div:nth-child(4) {
+  background: var(--persian-coral);
+}
+
+#colors .demo-grid > div:nth-child(5) {
+  background: var(--matcha-green);
+}
+
+#colors .demo-grid > div:nth-child(6) {
+  background: var(--green);
+}
+
+#colors .demo-grid > div:nth-child(7) {
+  background: var(--moss-green);
+}
+
+#colors .demo-grid > div:nth-child(8) {
+  background: var(--soil-green);
+}

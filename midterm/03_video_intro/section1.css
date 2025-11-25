@@ -1,0 +1,57 @@
+#section-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  align-items: self-start;
+}
+
+#section-1 .media {
+  max-width: 40vw;
+  aspect-ratio: 5 / 4;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+
+#section-1 a,
+#section-1 a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+#section-1 h2 {
+  color: var(--matcha-green);
+  margin-bottom: 10px;
+}
+
+.content-styles {
+  padding: 80px 80px;
+}
+
+/* TODO: Add video-label styles here */
+.video-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;  
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 5;   /* so the container appears above the video */  
+}
+
+
+/* TODO: Add responsive CSS here */
+@media screen and (max-width: 1024px) {
+  #section-1 {
+      grid-template-columns: 1fr;
+  }
+  /* TODO: Add the remaining responsive styles here */
+  #section-1 .media {
+    max-width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .content-styles {
+    padding: 20px 20px;
+  }
+}

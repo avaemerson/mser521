@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to utility classes (required for all sections) -->
+    <link rel="stylesheet" href="../utility-classes.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to JavaScript files -->
+     <script src="nav.js" defer></script>
+    <script src="carousel.js" defer></script>
+
+    <title>Final Product</title>
+</head>
+
+<body>
+    <!-- ============================================
+         NAVIGATION (Exercise 2)
+         ============================================ -->
+    <header>
+        <!-- TODO: Add navigation HTML here -->
+        <nav class="navigation">
+          <div class="left">
+              <a class="logo" href="https://naturalareasnyc.org">
+                  <img src="../images/logo-white.svg" alt="Natural Areas Conservancy Logo">
+              </a>
+              <div class="nav-links">
+                  <a href="#section-2">What We Do</a>
+                  <a href="#section-3">About Us</a>
+                  <a href="#section-4">Events</a>
+              </div>
+          </div>
+          <div class="right">
+              <div class="nav-links">
+                  <a href="#">Get Involved</a>
+                  <a href="#" class="btn primary">Donate</a>
+              </div>
+          </div>
+          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+      </nav>
+    </header>
+
+    <main id="main">
+        <!-- ============================================
+             HERO SECTION (Exercise 1)
+             ============================================ -->
+        <!-- TODO: Add hero section here -->
+        <section id="hero" class="hero">
+          <div class="container grid">
+              <article>
+                  <h1 class="mega">Healthy, resilient natural areas for all</h1>
+                  <p class="xlarge">We champion and protect New York City's 20,000 acres of forests and wetlands to create a sustainable future here and across the nation.</p>
+                  <a class="jump-arrow" href="#section-1">
+                      <span class="accessibility">Jump to first section</span>
+                  </a>
+              </article>
+          </div>
+      </section>
+        <!-- ============================================
+             SECTION 1 - VIDEO INTRODUCTION (Exercise 3)
+             ============================================ -->
+        <!-- TODO: Add section 1 (Video Introduction) here -->
+        <section id="section-1" class="panel">
+          <div>
+              <div class="media">
+                  <a href="https://www.youtube.com/watch?v=dn75qhZWbh4">
+                      <div class="cover-image">
+                          <img width="1024" height="573" src="../images/video-thumbnail.png" alt="">
+                      </div>
+                      <!-- TODO: Add video label here with play button and "Watch Video" text -->
+                      <span class="video-label">
+                          <span class="btn icon play large"></span>
+                          <span class="heading-4">Watch Video</span>
+                      </span>
+                  </a>
+              </div>
+          </div>
+          <article class="content-styles">
+              <h2 class="eyebrow">Who are we?</h2>
+              <h3 class="heading-4">The Natural Areas Conservancy
+                  strives to deepen the connection between people and
+                  nature in NYC by increasing access, providing education, and building the parks workforce. Through
+                  research, partnerships, and advocacy, we ensure that urban natural areas are healthy and thriving
+                  and that their benefits reach all New Yorkers.
+              </h3>
+          </article>
+      </section>
+        <!-- ============================================
+             SECTION 2 - WHAT WE DO (Exercise 4)
+             ============================================ -->
+        <!-- TODO: Add section 2 (What We Do) here -->
+        <section id="section-2" class="panel">
+          <img id="geese" width="630" height="97" src="../images/goose.png" alt="Geese flying">
+
+          <h2 class="heading-1">What we do</h2>
+
+          <div class="grid">
+              <!-- TODO: Add 4 cards here using the pattern from style guide -->
+              
+                  <a class="btn-container card" href="https://naturalareasnyc.org/internships/">
+                      <div class="media fancy-boxes">
+                          <img src="../images/card-intern.jpg" alt="Intern waters planters with a hose inside greenhouse">
+                      </div>
+                      <article>
+                          <h3 class="heading-5"><span>Train</span> the next generation</h3>
+                          <p class="small">Our CUNY and high school internship programs provide STEM students with the training to succeed in the environmental workforce.</p>
+                          <span class="btn icon arrow">
+                              <span class="accessibility">Internships</span>
+                          </span>
+                      </article>
+                  </a>
+              
+
+              <!-- More cards -->
+              
+                  <a class="btn-container card" href="https://naturalareasnyc.org/research/">
+                      <div class="media fancy-boxes">
+                          <img src="../images/card-staff.jpg" alt="Three staff members walk one by one into a forest, NAC logos are visible on back of shirts">
+                      </div>
+                      <article>
+                          <h3 class="heading-5"><span>Conduct</span> applied research</h3>
+                          <p class="small">We study urban natural areas and develop resources that demonstrate their value.</p>
+                          <span class="btn icon arrow">
+                              <span class="accessibility">Innovative Research</span>
+                          </span>
+                      </article>
+                  </a>
+              
+
+              <!-- More cards -->
+              
+                  <a class="btn-container card" href="https://naturalareasnyc.org/connect-nyc-to-nature/">
+                      <div class="media fancy-boxes">
+                          <img src="../images/card-program.jpg" alt="Two volunteers smiling wearing safety gloves, one holds a branch">
+                      </div>
+                      <article>
+                          <h3 class="heading-5"><span>Connect</span> New Yorkers to nature</h3>
+                          <p class="small">We host tours and volunteer events in local natural areas and work to improve NYC's network of trails.</p>
+                          <span class="btn icon arrow">
+                              <span class="accessibility">Connect New Yorkers to Nature</span>
+                          </span>
+                      </article>
+                  </a>
+              
+
+              <!-- More cards -->
+              
+                  <a class="btn-container card" href="https://naturalareasnyc.org/coalition-advocacy/">
+                      <div class="media fancy-boxes">
+                          <img src="../images/card-advocacy.jpg" alt="Large group of protestors holding Play Fair signs stand on steps of NYC city hall">
+                      </div>
+                      <article>
+                          <h3 class="heading-5"><span>Advocate</span> for natural areas</h3>
+                          <p class="small">We make our voices heard by championing forests and wetlands with elected officials.</p>
+                          <span class="btn icon arrow">
+                              <span class="accessibility">Coalition Advocacy</span>
+                          </span>
+                      </article>
+                  </a>
+              
+          </div>
+      </section>
+        <!-- ============================================
+             SECTION 3 - JOIN OUR EFFORTS (Exercise 5)
+             ============================================ -->
+        <!-- TODO: Add section 3 (Join Our Efforts) here -->
+        <section id="section-3">
+          <div class="container">
+              <h2 class="heading-1">Join our efforts</h2>
+
+              <div class="grid">
+                  <!-- TODO: Add 4 icon cards here using the pattern from style guide -->
+
+                  <a class="btn-container icon-card" href="https://naturalareasnyc.org/donate/">
+                      <div class="media">
+                          <img src="../images/icon-donate.svg" alt="Donate icon" />
+                      </div>
+                      <article>
+                          <h3 class="heading-4">Donate</h3>
+                          <p class="small">Give back to natural areas. Your gift will go toward preserving our vital forests and wetlands.</p>
+                          <span class="btn tertiary">Donate now</span>
+                      </article>
+                  </a>
+
+                  <a class="btn-container icon-card" href="https://naturalareasnyc.org/super-steward-program/">
+                      <div class="media">
+                          <img src="../images/icon-volunteer.svg" alt="Volunteer icon" />
+                      </div>
+                      <article>
+                          <h3 class="heading-4">Volunteer</h3>
+                          <p class="small">Bring new vibrancy to your community by becoming a Super Steward Pathkeeper.</p>
+                          <span class="btn tertiary">See opportunities</span>
+                      </article>
+                  </a>
+
+                  <a class="btn-container icon-card" href="https://naturalareasnyc.org/corporate-partnerships/">
+                      <div class="media">
+                          <img src="../images/icon-partner.svg" alt="Partner icon" />
+                      </div>
+                      <article>
+                          <h3 class="heading-4">Partner</h3>
+                          <p class="small">Engage with our mission through corporate sponsorship and volunteering.</p>
+                          <span class="btn tertiary">Learn more</span>
+                      </article>
+                  </a>
+
+                  <a class="btn-container icon-card" href="https://naturalareasnyc.org/events/">
+                      <div class="media">
+                          <img src="../images/icon-get-outside.svg" alt="Get outside icon" />
+                      </div>
+                      <article>
+                          <h3 class="heading-4">Get outside</h3>
+                          <p class="small">Tour NYC parks, learn about local wildlife, or get your hands dirty on a stewardship day.</p>
+                          <span class="btn tertiary">Browse events</span>
+                      </article>
+                  </a>
+              </div>
+          </div>
+      </section>
+        <!-- ============================================
+             SECTION 4 - THE NYC NATURE MAP (Exercise 6)
+             ============================================ -->
+        <!-- TODO: Add section 4 (The NYC Nature Map) here -->
+        <section id="section-4">
+          <div class="container grid">
+              <!-- TODO: Add 2 columns here using the pattern from style guide -->
+                  <div class="column">
+                      <div class="media">
+                          <img src="../images/callout1.jpg" alt="Map">
+                      </div>
+                      <article>
+                          <h2>The NYC Nature Map</h2>
+                          <p class="large">Experience a bird's-eye-view of our natural areas and learn what's in your neighborhood.</p>
+                          <a href="https://naturalareasnyc.org/nyc-nature-map/" class="btn primary">Explore now</a>
+                      </article>
+                  </div>
+                  <div class="column">
+                      <div class="media">
+                          <img src="../images/data-screenshot.webp" alt="Data">
+                      </div>
+                      <article>
+                          <h2>Data Sets for Download</h2>
+                          <p class="large">Explore our forest assessment and other data sets, packaged for easy download.</p>
+                          <a href="https://naturalareasnyc.org/data-sets-for-download/" class="btn primary">Get started</a>
+                      </article>
+                  </div>
+      
+           </div>
+      </section>
+        <!-- ============================================
+             SECTION 5 - FORESTS IN CITIES NETWORK (Exercise 7)
+             ============================================ -->
+        <!-- TODO: Add section 5 (Forests in Cities Network) here -->
+        <section id="section-5">
+          <div class="container">
+              <h2 class="heading-1 mega">Forests in <br>Cities network</h2>
+              <div class="cards">
+                  <!-- TODO: Add 2 text-only cards here using the pattern from style guide -->
+                  <a class="btn-container card" href="https://naturalareasnyc.org/forests-in-cities-network/">
+                      <article>
+                          <h3 class="heading-4">What is Forests in Cities?</h3>
+                          <p class="large">We created the FiC network in 2019 to advance healthy forested natural areas across America. By nurturing a network of interdisciplinary experts from 26 cities, together we advance urban forest science and practice while advocating for increased resources and support for our cities' forests.</p>
+                          <span class="btn icon arrow">
+                              <span class="accessibility">FiC</span>
+                          </span>
+                      </article>
+                  </a>
+      
+                  <a class="btn-container card" href="https://fic.naturalareasnyc.org/">
+                      <article>
+                          <h3 class="heading-4">Explore the Resource Library</h3>
+                          <p class="large">Everything you need to know about forested natural areas—all in one place. Find peer-reviewed research, forest management plans, land and project assessment protocols, and more. We curate and collect new resources from FiC members weekly.</p>
+                          <span class="btn icon arrow">
+                              <span class="accessibility">Explore the Resource Library</span>
+                          </span>
+                      </article>
+                  </a>
+              </div>
+          </div>
+      </section>
+        <!-- ============================================
+             SECTION 6 - CAROUSEL (Exercise 8)
+             ============================================ -->
+        <!-- TODO: Add section 6 (Carousel) here -->
+        <section id="section-6">
+          <div class="container">
+              <article>
+                  <h2 class="heading-1">Understories</h2>
+                  <p class="heading-6">The backdoor to NYC's backyard</p>
+              </article>
+      
+              <div class="carousel">
+                  <button onclick="moveBackward()" class="slick-prev slick-arrow" aria-label="Previous" type="button">Previous</button>
+                  <button onclick="moveForward()" class="slick-next slick-arrow" aria-label="Next" type="button">Next</button>
+                  <div>
+                      <div class="slick-track">
+                          <!-- TODO: Add carousel cards here using the pattern from style guide -->
+                          <div class="slide slick-slide">
+                          <a class="card vertical-card carousel-card" href="https://www.nycgovparks.org/facilities/hikingtrails">
+                              <div class="media fancy-boxes">
+                                  <img src="../images/carousel-10.jpg" alt="Walk in forest with community">
+                              </div>
+                              <article>
+                                  <span class="pill small green">Recreation</span>
+                                  <span class="caption">November 5, 2025</span>
+                                  <h3 class="heading-5">Hiking trails in NYC</h3>
+                                  <span class="btn icon arrow">
+                                      <span class="accessibility">Read article</span>
+                                  </span>
+                              </article>
+                          </a>
+                      </div>
+      
+                          <div class="slide slick-slide">
+                          <a class="card vertical-card carousel-card" href="https://www.nycgovparks.org/learn/ecosystems/wetlands-in-new-york-city-parks">
+                              <div class="media fancy-boxes">
+                                  <img src="../images/carousel-8.jpg" alt="">
+                              </div>
+                              <article>
+                                  <span class="pill small green">Education</span>
+                                  <span class="caption">Sept 20, 2025</span>
+                                  <h3 class="heading-5">Learn about wetlands in NYC parks</h3>
+                                  <span class="btn icon arrow">
+                                      <span class="accessibility">Read article</span>
+                                  </span>
+                              </article>
+                          </a>
+                      </div>
+      
+                          <div class="slide slick-slide">
+                          <a class="card vertical-card carousel-card" href="https://www.nycgovparks.org/places-to-go/birding">
+                              <div class="media fancy-boxes">
+                                  <img src="../images/carousel-2.jpeg" alt="">
+                              </div>
+                              <article>
+                                  <span class="pill small green">Nature Tips</span>
+                                  <span class="caption">June 16, 2025</span>
+                                  <h3 class="heading-5">Birding at NYC parks</h3>
+                                  <span class="btn icon arrow">
+                                      <span class="accessibility">Read article</span>
+                                  </span>
+                              </article>
+                          </a>
+                      </div>
+      
+                          <div class="slide slick-slide">
+                          <a class="card vertical-card carousel-card" href="https://www.columbiaspectator.com/city-news/2023/09/24/forest-for-all-nyc-hosts-rally-to-combat-extreme-heat-and-health-concerns-by-expanding-tree-canopy/">
+                              <div class="media fancy-boxes">
+                                  <img src="../images/carousel-4.jpg" alt="">
+                              </div>
+                              <article>
+                                  <span class="pill small green">Activism</span>
+                                  <span class="caption">January 6, 2025</span>
+                                  <h3 class="heading-5">Activism for trees in NYC</h3>
+                                  <span class="btn icon arrow">
+                                      <span class="accessibility">Read article</span>
+                                  </span>
+                              </article>
+                          </a>
+                      </div>
+      
+                      </div>
+                  </div>
+              </div>
+      
+              <a href="https://naturalareasnyc.org/understories/" class="btn primary" target="">View All</a>
+          </div>
+      </section>
+    </main>
+
+</body>
+
+</html>

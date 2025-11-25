@@ -1,0 +1,25 @@
+#section-6 {
+  background-image: url(../images/section-6-bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-top: 50px;
+  padding-bottom: 350px;
+}
+
+#section-6 .heading-1 {
+  margin: 0;
+}
+
+.carousel-card .heading-5 {
+  font-size: 1.2rem;
+}
+
+#section-6 .card {
+  width: 360px;
+}
+
+#section-6 .card .media {
+  height: 250px;
+  width: 100%;
+}

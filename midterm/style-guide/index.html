@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="../utility-classes.css">
+    <link rel="stylesheet" href="style-guide.css">
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+    <title>Style Guide Demo</title>
+</head>
+
+<body>
+    <!-- Left Sidebar Navigation -->
+    <nav class="style-guide-nav">
+        <h3>Navigation</h3>
+        <ul>
+            <li>
+                <a href="#typography">Typography Classes</a>
+                <ul>
+                    <li><a href="#typography-heading-1">.heading-1</a></li>
+                    <li><a href="#typography-heading-4">.heading-4</a></li>
+                    <li><a href="#typography-heading-5">.heading-5</a></li>
+                    <li><a href="#typography-heading-6">.heading-6</a></li>
+                    <li><a href="#typography-eyebrow">.eyebrow</a></li>
+                    <li><a href="#typography-mega">.mega</a></li>
+                    <li><a href="#typography-xlarge">.xlarge</a></li>
+                    <li><a href="#typography-large">.large</a></li>
+                    <li><a href="#typography-small">.small</a></li>
+                    <li><a href="#typography-caption">.caption</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#buttons">Button Classes</a>
+                <ul>
+                    <li><a href="#buttons-primary">.btn.primary</a></li>
+                    <li><a href="#buttons-tertiary">.btn.tertiary</a></li>
+                    <li><a href="#buttons-icon">.btn.icon</a></li>
+                    <li><a href="#buttons-icon-large">.btn.icon.large</a></li>
+                    <li><a href="#buttons-icon-arrow">.btn.icon.arrow</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#layout">Layout Classes</a>
+                <ul>
+                    <li><a href="#layout-container">.container</a></li>
+                    <li><a href="#layout-grid">.grid</a></li>
+                    <li><a href="#layout-card">.card</a></li>
+                    <li><a href="#layout-column">.column</a></li>
+                    <li><a href="#layout-media">.media</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#utilities">Utility Classes</a>
+                <ul>
+                    <li><a href="#utilities-panel">.panel</a></li>
+                    <li><a href="#utilities-pill">.pill</a></li>
+                    <li><a href="#utilities-pill-caption">.pill + .caption</a></li>
+                    <li><a href="#utilities-accessibility">.accessibility</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#patterns">Hero Section and Cards</a>
+                <ul>
+                    <li><a href="#patterns-nav">Navigation</a></li>
+                    <li><a href="#patterns-hero">Hero Section</a></li>
+                    <li><a href="#patterns-card">Card</a></li>
+                    <li><a href="#patterns-icon-card">Icon Card</a></li>
+                    <li><a href="#patterns-text-card">Text-Only Card</a></li>
+                    <li><a href="#patterns-carousel-card">Carousel Card</a></li>
+                </ul>
+            </li>
+            <li><a href="#colors">CSS Color Variables</a></li>
+        </ul>
+    </nav>
+
+    <div class="style-guide-wrapper">
+        <div class="container">
+            <h1 class="heading-1">HTML Style Guide - Visual Demo</h1>
+            <p class="large">This page demonstrates how each utility class looks when rendered. Use this as a visual
+                reference while building your exercises.</p>
+
+            <!-- Typography Section -->
+            <section id="typography" class="demo-section">
+                <h2>Typography Classes</h2>
+
+                <div id="typography-heading-1" class="demo-item">
+                    <header>
+                        <h3><code>.heading-1</code></h3>
+                        <h3>Large Section Headings</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;h2 class="heading-1"&gt;What we do&lt;/h2&gt;
+&lt;!-- Or use semantic h1 --&gt;
+&lt;h1 class="heading-1"&gt;Page Title&lt;/h1&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <h2 class="heading-1">What we do</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-heading-4" class="demo-item">
+                    <header>
+                        <h3><code>.heading-4</code></h3>
+                        <h3>Card/Article Headings</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;h3 class="heading-4"&gt;Card Title&lt;/h3&gt;
+&lt;h4 class="heading-4"&gt;Article Heading&lt;/h4&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <h3 class="heading-4">Card Title or Article Heading</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-heading-5" class="demo-item">
+                    <header>
+                        <h3><code>.heading-5</code></h3>
+                        <h3>Smaller Card Headings (with colored span)</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;h3 class="heading-5"&gt;&lt;span&gt;Train&lt;/span&gt; the next generation&lt;/h3&gt;
+&lt;!-- Use span inside for colored words --&gt;
+&lt;h3 class="heading-5"&gt;&lt;span&gt;Conduct&lt;/span&gt; applied research&lt;/h3&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <h3 class="heading-5"><span>Train</span> the next generation</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-heading-6" class="demo-item">
+                    <header>
+                        <h3><code>.heading-6</code></h3>
+                        <h3>Subheadings</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;p class="heading-6"&gt;The backdoor to NYC's backyard&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <p class="heading-6">The backdoor to NYC's backyard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-eyebrow" class="demo-item">
+                    <header>
+                        <h3><code>.eyebrow</code></h3>
+                        <h3>Small Label Above Heading</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;h2 class="eyebrow"&gt;Who are we?&lt;/h2&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <h2 class="eyebrow">Who are we?</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-mega" class="demo-item">
+                    <header>
+                        <h3><code>.mega</code></h3>
+                        <h3>Extra Large Hero Text</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;h1 class="mega"&gt;Healthy, resilient natural areas for all&lt;/h1&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <h1 class="mega">Healthy, resilient natural areas for all</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-xlarge" class="demo-item">
+                    <header>
+                        <h3><code>.xlarge</code></h3>
+                        <h3>Large Paragraph Text</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;p class="xlarge"&gt;We champion and protect New York City's 20,000 acres of forests and wetlands to create a sustainable future here and across the nation.&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <p class="xlarge">We champion and protect New York City's 20,000 acres of forests and
+                                wetlands
+                                to
+                                create a sustainable future here and across the nation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-large" class="demo-item">
+                    <header>
+                        <h3><code>.large</code></h3>
+                        <h3>Medium-Large Text</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;p class="large"&gt;Experience a bird's-eye-view of our natural areas and learn what's in your neighborhood.&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <p class="large">Experience a bird's-eye-view of our natural areas and learn what's in your
+                                neighborhood.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-small" class="demo-item">
+                    <header>
+                        <h3><code>.small</code></h3>
+                        <h3>Small Body Text</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;p class="small"&gt;Our CUNY and high school internship programs provide STEM students with the training to succeed in the environmental workforce.&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <p class="small">Our CUNY and high school internship programs provide STEM students with the
+                                training
+                                to succeed in the environmental workforce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="typography-caption" class="demo-item">
+                    <header>
+                        <h3><code>.caption</code></h3>
+                        <h3>Small Caption Text</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="caption"&gt;October 27, 2025&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <span class="caption">October 27, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Button Section -->
+            <section id="buttons" class="demo-section">
+                <h2>Button Classes</h2>
+
+                <div id="buttons-primary" class="demo-item">
+                    <header>
+                        <h3><code>.btn.primary</code></h3>
+                        <h3>Primary Action Buttons</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;a href="#" class="btn primary"&gt;Donate&lt;/a&gt;
+&lt;a href="#" class="btn primary"&gt;Explore Now&lt;/a&gt;
+&lt;a href="#" class="btn primary"&gt;Get Started&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="demo-grid">
+                                <a href="#" class="btn primary">Donate</a>
+                                <a href="#" class="btn primary">Explore Now</a>
+                                <a href="#" class="btn primary">Get Started</a>
+                                <a href="#" class="btn primary">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buttons-tertiary" class="demo-item">
+                    <header>
+                        <h3><code>.btn.tertiary</code></h3>
+                        <h3>Text Link Buttons (hover to see underline animation)</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="btn tertiary"&gt;Donate now&lt;/span&gt;
+&lt;span class="btn tertiary"&gt;See opportunities&lt;/span&gt;
+&lt;span class="btn tertiary"&gt;Learn more&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div>
+                                <a class="btn tertiary" href="#">Donate now</a><br><br>
+                                <a class="btn tertiary" href="#">See opportunities</a><br><br>
+                                <a class="btn tertiary" href="#">Learn more</a><br><br>
+                                <a class="btn tertiary" href="#">Browse events</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buttons-icon" class="demo-item">
+                    <header>
+                        <h3><code>.btn.icon</code></h3>
+                        <h3>Standard Icon Button</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="btn icon arrow"&gt;
+    &lt;span class="accessibility"&gt;Icon button&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <span class="btn icon arrow">
+                                <span class="accessibility">Icon button</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buttons-icon-large" class="demo-item">
+                    <header>
+                        <h3><code>.btn.icon.large</code></h3>
+                        <h3>Large Icon Button</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="btn icon large play"&gt;
+    &lt;span class="accessibility"&gt;Large icon button&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <span class="btn icon large play">
+                                <span class="accessibility">Large icon button</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buttons-icon-arrow" class="demo-item">
+                    <header>
+                        <h3><code>.btn.icon.arrow</code></h3>
+                        <h3>Arrow Icon Button</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="btn icon arrow"&gt;
+    &lt;span class="accessibility"&gt;Arrow button&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="card">
+                                <span class="btn icon arrow">
+                                    <span class="accessibility">Arrow button</span>
+                                </span>
+                                <p>Hover over the arrow button to see it move</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layout Section -->
+            <section id="layout" class="demo-section">
+                <h2>Layout Classes</h2>
+
+                <div id="layout-container" class="demo-item">
+                    <header>
+                        <h3><code>.container</code></h3>
+                        <h3>Content Wrapper</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;div class="container"&gt;
+    &lt;!-- Content here --&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="container">
+                                <p>This content is inside a .container - it has max-width and centered margin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="layout-grid" class="demo-item">
+                    <header>
+                        <h3><code>.grid-two-column</code></h3>
+                        <h3>Grid Layout (2 columns example)</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;div class="grid"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+    &lt;div&gt;Item 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="grid-two-column">
+                                <div class="bg-white">Item 1</div>
+                                <div class="bg-white">Item 2</div>
+                                <div class="bg-white">Item 3</div>
+                                <div class="bg-white">Item 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="layout-card" class="demo-item">
+                    <header>
+                        <h3><code>.card</code></h3>
+                        <h3>Card Component (with hover effect)</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet" style="grid-column: 1 / 3;">
+                            <pre><code class="language-markup">&lt;a class="btn-container card" href="#"&gt;
+    &lt;div class="media"&gt;
+        &lt;img src="image.jpg" alt=""&gt;
+    &lt;/div&gt;
+    &lt;article&gt;
+        &lt;h3 class="heading-5"&gt;Card Title&lt;/h3&gt;
+        &lt;p class="small"&gt;Card description text.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual" style="grid-column: 1 / 3;">
+                            <div class="demo-card-wrapper">
+                                <a class="btn-container card" href="#">
+                                    <div class="media"></div>
+                                    <article>
+                                        <h3 class="heading-5">Card Title</h3>
+                                        <p class="small">Card description text goes here. Hover to see shadow effect.
+                                        </p>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="layout-column" class="demo-item">
+                    <header>
+                        <h3><code>.column</code></h3>
+                        <h3>Column Layout (Centered Content)</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;div class="grid" style="grid-template-columns: repeat(2, 1fr);"&gt;
+    &lt;div class="column"&gt;
+        &lt;div class="media"&gt;
+            &lt;img src="image.jpg" alt=""&gt;
+        &lt;/div&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;p class="large"&gt;Description&lt;/p&gt;
+            &lt;a href="#" class="btn primary"&gt;Button&lt;/a&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;div class="media"&gt;
+            &lt;img src="image.jpg" alt=""&gt;
+        &lt;/div&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;p class="large"&gt;Description&lt;/p&gt;
+            &lt;a href="#" class="btn primary"&gt;Button&lt;/a&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="demo-visual column-demo">
+                        <div class="grid-two-column">
+                            <div class="column">
+                                <div class="media">
+                                    <div>Image</div>
+                                </div>
+                                <article>
+                                    <h2>Title</h2>
+                                    <p class="large">This is a longer description that demonstrates how the column
+                                        content spans the full width of its container.</p>
+                                    <a href="#" class="btn primary">Button</a>
+                                </article>
+                            </div>
+                            <div class="column">
+                                <div class="media">
+                                    <div>Image</div>
+                                </div>
+                                <article>
+                                    <h2>Title</h2>
+                                    <p class="large">This is a longer description that demonstrates how the column
+                                        content spans the full width of its container.</p>
+                                    <a href="#" class="btn primary">Button</a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="layout-media" class="demo-item">
+                    <header>
+                        <h3><code>.media</code></h3>
+                        <h3>Image Container (with aspect ratio)</h3>
+                    </header>
+
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;div class="media"&gt;
+    &lt;img src="image.jpg" alt="Description"&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="media media-demo"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Utility Classes Section -->
+            <section id="utilities" class="demo-section">
+                <h2>Utility Classes</h2>
+
+                <div id="utilities-panel" class="demo-item">
+                    <header>
+                        <h3><code>.panel</code></h3>
+                        <h3>Section Background</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;section id="section-1" class="panel"&gt;
+    &lt;!-- Section content --&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="panel">
+                                <p>This demonstrates the .panel class - adds background color (#f4f2ef) and padding
+                                    (50px).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="utilities-pill" class="demo-item">
+                    <header>
+                        <h3><code>.pill</code></h3>
+                        <h3>Badge/Tag Elements</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="pill"&gt;Default Pill&lt;/span&gt;
+&lt;span class="pill green"&gt;Green Pill&lt;/span&gt;
+&lt;span class="pill small"&gt;Small Pill&lt;/span&gt;
+&lt;span class="pill small green"&gt;Small Green Pill&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div>
+                                <span class="pill">Default Pill</span>
+                                <span class="pill green">Green Pill</span>
+                                <span class="pill small">Small Pill</span>
+                                <span class="pill small green">Small Green Pill</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="utilities-pill-caption" class="demo-item">
+                    <header>
+                        <h3><code>.pill</code> with <code>.caption</code></h3>
+                        <h3>Common Pattern</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="pill small green"&gt;Announcements&lt;/span&gt;
+&lt;span class="caption"&gt;October 27, 2025&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div>
+                                <span class="pill small green">Announcements</span>
+                                <span class="caption">October 27, 2025</span><br><br>
+                                <span class="pill small green">Nature Tips</span>
+                                <span class="caption">October 17, 2025</span><br><br>
+                                <span class="pill small green">Education</span>
+                                <span class="caption">September 29, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="utilities-accessibility" class="demo-item">
+                    <header>
+                        <h3><code>.accessibility</code></h3>
+                        <h3>Screen Reader Text (Hidden Visually)</h3>
+                    </header>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;span class="btn icon arrow"&gt;
+    &lt;span class="accessibility"&gt;This text is hidden but readable by screen readers&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div>
+                                <span class="btn icon arrow">
+                                    <span class="accessibility">This text is hidden but readable by screen
+                                        readers</span>
+                                </span>
+                                <p>
+                                    ↑ The icon above has hidden accessibility text - inspect the element to see it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Section and Cards -->
+            <section id="patterns" class="demo-section">
+                <h2>Hero Section and Cards</h2>
+
+                <div id="patterns-nav" class="demo-item">
+                    <h3>Navigation Pattern</h3>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;header&gt;
+    &lt;nav class="navigation"&gt;
+        &lt;div class="left"&gt;
+            &lt;a class="logo" href="https://naturalareasnyc.org"&gt;
+                &lt;img src="../images/logo-white.svg" alt="Natural Areas Conservancy Logo"&gt;
+            &lt;/a&gt;
+            &lt;div class="nav-links"&gt;
+                &lt;a href="#section-2"&gt;Item 1&lt;/a&gt;
+                &lt;a href="#section-3"&gt;Item 2&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;div class="nav-links"&gt;
+                &lt;a href="#"&gt;Item 3&lt;/a&gt;
+                &lt;a href="#" class="btn primary"&gt;Donate&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="hamburger" aria-label="Toggle menu" aria-expanded="false"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual" style="grid-column: 1 / 3;">
+                            <div style="width: 100%">
+                                <nav class="navigation">
+                                    <div class="left">
+                                        <h1 style="font-size: 1.5rem; color: white; font-weight: 700;">Logo</h1>
+                                        <div class="nav-links">
+                                            <a href="#">Item 1</a>
+                                            <a href="#">Item 2</a>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="nav-links">
+                                            <a href="#">Item 3</a>
+                                            <a href="#" class="btn primary">Donate</a>
+                                        </div>
+                                    </div>
+                                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="patterns-hero" class="demo-item">
+                    <h3>Hero Section Pattern</h3>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;section id="hero" class="hero"&gt;
+    &lt;div class="container grid"&gt;
+        &lt;article&gt;
+            &lt;h1 class="mega"&gt;Main Heading&lt;/h1&gt;
+            &lt;p class="xlarge"&gt;Large description text&lt;/p&gt;
+            &lt;a class="jump-arrow" href="#section-1"&gt;
+                &lt;span class="accessibility"&gt;Jump to first section&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual hero-demo">
+                            <div class="hero hero-demo">
+                                <div class="container grid">
+                                    <article>
+                                        <h1 class="mega">Healthy, resilient natural areas</h1>
+                                        <p class="xlarge">Description text goes here.</p>
+                                        <a class="jump-arrow" href="#">
+                                            <span class="accessibility">Jump to section</span>
+                                        </a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="patterns-card" class="demo-item">
+                    <h3>Card</h3>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;div class="grid"&gt;
+    &lt;a class="btn-container card" href="#"&gt;
+        &lt;div class="media fancy-boxes"&gt;
+            &lt;img src="image.jpg" alt=""&gt;
+        &lt;/div&gt;
+        &lt;article&gt;
+            &lt;h3 class="heading-5"&gt;&lt;span&gt;Action&lt;/span&gt; description&lt;/h3&gt;
+            &lt;p class="small"&gt;Card description text.&lt;/p&gt;
+            &lt;span class="btn icon arrow"&gt;
+                &lt;span class="accessibility"&gt;Card title&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/article&gt;
+    &lt;/a&gt;
+    &lt;!-- More cards --&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual" style="grid-column: 1 / 3; display:grid;gap:20px;">
+                            <a class="btn-container card full-width" href="#" style="max-width:600px;">
+                                <div class="media fancy-boxes"></div>
+                                <article>
+                                    <h3 class="heading-5"><span>Train</span> the next generation</h3>
+                                    <p class="small">Card description text.</p>
+                                    <span class="btn icon arrow">
+                                        <span class="accessibility">Card link</span>
+                                    </span>
+                                </article>
+                            </a>
+                            <a class="btn-container card full-width card-second" href="#" style="max-width:600px;">
+                                <div class="media fancy-boxes"></div>
+                                <article>
+                                    <h3 class="heading-5"><span>Conduct</span> applied research</h3>
+                                    <p class="small">We study urban natural areas to inform management and policy
+                                        decisions.</p>
+                                    <span class="btn icon arrow">
+                                        <span class="accessibility">Card link</span>
+                                    </span>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="patterns-icon-card" class="demo-item">
+                    <h3>Icon Card Pattern (Section 3 Style)</h3>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;a class="btn-container icon-card" href="#"&gt;
+    &lt;div class="media"&gt;
+        &lt;img src="../images/icon-donate.svg" alt="Donate icon" /&gt;
+    &lt;/div&gt;
+    &lt;article&gt;
+        &lt;h3 class="heading-4"&gt;Heading&lt;/h3&gt;
+        &lt;p class="small"&gt;Here is a subheading to further describe the heading.&lt;/p&gt;
+        &lt;span class="btn tertiary"&gt;Take Action&lt;/span&gt;
+    &lt;/article&gt;
+&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="icon-card-wrapper">
+                                <a class="btn-container icon-card" href="#">
+                                    <div class="media">
+                                        <img src="../images/icon-donate.svg" alt="Donate icon" />
+                                    </div>
+                                    <article>
+                                        <h3 class="heading-4">Heading</h3>
+                                        <p class="small">Here is a subheading to further describe the heading.</p>
+
+                                        <span class="btn tertiary">Take Action</span>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="patterns-text-card" class="demo-item">
+                    <h3>Text-Only Card Pattern (Section 5 Style)</h3>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;a class="btn-container card" href="#"&gt;
+    &lt;article&gt;
+        &lt;h3 class="heading-4"&gt;Title&lt;/h3&gt;
+        &lt;p class="large"&gt;This is a description that explains the content or purpose of the card. The text should be informative and provide context for the card's action or topic.&lt;/p&gt;
+        &lt;span class="btn icon arrow"&gt;
+            &lt;span class="accessibility"&gt;Card title&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/article&gt;
+&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual" style="grid-column: 1 / 3;">
+                            <div class="text-card-wrapper">
+                                <a class="btn-container card" href="#">
+                                    <article>
+                                        <h3 class="heading-4">Title</h3>
+                                        <p class="large">This is a description that explains the content or purpose of
+                                            the card. The text should be informative and provide context for the card's
+                                            action or topic.</p>
+                                        <span class="btn icon arrow">
+                                            <span class="accessibility">Card title</span>
+                                        </span>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="patterns-carousel-card" class="demo-item">
+                    <h3>Carousel Card Pattern (Section 6 Style)</h3>
+                    <div class="demo-with-code">
+                        <div class="code-snippet">
+                            <pre><code class="language-markup">&lt;a class="card vertical-card carousel-card" href="#"&gt;
+    &lt;div class="media fancy-boxes"&gt;
+        &lt;img src="../images/carousel-1.jpg" alt=""&gt;
+    &lt;/div&gt;
+    &lt;article&gt;
+        &lt;span class="pill small green"&gt;Announcements&lt;/span&gt;
+        &lt;span class="caption"&gt;October 27, 2025&lt;/span&gt;
+        &lt;h3 class="heading-5"&gt;Article Title&lt;/h3&gt;
+        &lt;span class="btn icon arrow"&gt;
+            &lt;span class="accessibility"&gt;Read article&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/article&gt;
+&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="demo-visual">
+                            <div class="carousel-card-wrapper">
+                                <a class="card vertical-card carousel-card" href="#">
+                                    <div class="media fancy-boxes"></div>
+                                    <article>
+                                        <div>
+                                            <span class="pill small green">Announcements</span>
+                                            <span class="caption">October 27, 2025</span>
+                                        </div>
+                                        <h3 class="heading-5">Gratitude Giveaway 2025</h3>
+                                        <span class="btn icon arrow">
+                                            <span class="accessibility">Read article</span>
+                                        </span>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <!-- Color Variables Demo -->
+        <section id="colors" class="demo-section">
+            <h2>CSS Color Variables</h2>
+            <div class="demo-grid">
+                <div><code>--white</code></div>
+                <div><code>--ivory</code></div>
+                <div><code>--black</code></div>
+                <div><code>--persian-coral</code></div>
+                <div><code>--matcha-green</code></div>
+                <div><code>--green</code></div>
+                <div><code>--moss-green</code></div>
+                <div><code>--soil-green</code></div>
+            </div>
+        </section>
+
+    </div>
+    </div>
+</body>
+
+</html>

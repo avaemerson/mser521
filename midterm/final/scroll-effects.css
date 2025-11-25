@@ -1,0 +1,125 @@
+/* ============================================
+   SCROLL EFFECTS - CSS
+   ============================================ */
+
+/* Base scroll animation styles */
+[data-scroll] {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-scroll].scroll-in {
+  opacity: 1;
+}
+
+/* Fade in animations */
+[data-scroll='fade-in'] {
+  opacity: 0;
+}
+
+[data-scroll='fade-in'].scroll-in {
+  opacity: 1;
+}
+
+/* Slide up animation */
+[data-scroll='slide-up'] {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+[data-scroll='slide-up'].scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide down animation */
+[data-scroll='slide-down'] {
+  opacity: 0;
+  transform: translateY(-60px);
+}
+
+[data-scroll='slide-down'].scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide left animation */
+[data-scroll='slide-left'] {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+[data-scroll='slide-left'].scroll-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide right animation */
+[data-scroll='slide-right'] {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+[data-scroll='slide-right'].scroll-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale animation */
+[data-scroll='scale'] {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+[data-scroll='scale'].scroll-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delay utilities */
+[data-scroll-delay='100'] {
+  transition-delay: 0.1s;
+}
+
+[data-scroll-delay='200'] {
+  transition-delay: 0.2s;
+}
+
+[data-scroll-delay='300'] {
+  transition-delay: 0.3s;
+}
+
+[data-scroll-delay='400'] {
+  transition-delay: 0.4s;
+}
+
+[data-scroll-delay='500'] {
+  transition-delay: 0.5s;
+}
+
+/* Parallax effect container */
+[data-parallax] {
+  will-change: transform;
+}
+
+/* Smooth reveal effect */
+[data-scroll='reveal'] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-scroll='reveal']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease-out;
+}
+
+[data-scroll='reveal'].scroll-in::before {
+  transform: translateX(0);
+}

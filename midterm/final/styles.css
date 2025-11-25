@@ -1,0 +1,347 @@
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 30px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+   .hero {
+      background-image: url('../images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    .hero h1 {
+      margin-top: 150px;
+    }
+    
+    
+/* ============================================
+   SECTION 1
+   ============================================*/
+
+/* Paste your styles for section 1 here from 03_video_intro/section1.css */
+#section-1 {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 0;
+   align-items: self-start;
+ }
+ 
+ #section-1 .media {
+   max-width: 40vw;
+   aspect-ratio: 5 / 4;
+   margin-top: 80px;
+   margin-left: 80px;
+ }
+ 
+ #section-1 a,
+ #section-1 a:visited {
+   text-decoration: none;
+   color: white;
+ }
+ 
+ #section-1 h2 {
+   color: var(--matcha-green);
+   margin-bottom: 10px;
+ }
+ 
+ .content-styles {
+   padding: 80px 80px;
+ }
+ 
+ /* TODO: Add video-label styles here */
+ .video-label {
+   display: flex;
+   align-items: center;
+   gap: 20px;  
+   position: absolute;
+   bottom: 24px;
+   left: 24px;
+   z-index: 5;   /* so the container appears above the video */  
+ }
+ 
+/* ============================================
+   SECTION 2 - WHAT WE DO
+   ============================================ */
+
+/* Paste your styles for section 2 here from 04_what_we_do/section2.css */
+#section-2 {
+   background-image: url(../images/section-2-bkg.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center bottom;
+   padding-bottom: 400px;
+ }
+ 
+ #section-2 .heading-1 {
+   text-align: center;
+   padding-top: 50px;
+ }
+ 
+ #section-2 .grid {
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+ }
+ 
+ #geese {
+   position: absolute;
+   right: 30px;
+   top: 20px;
+ }
+/* ============================================
+   SECTION 3
+   ============================================*/
+
+/* Paste your styles for section 3 here from 05_join_our_efforts/section3.css */
+#section-3 {
+  background-image: url(../images/section-3-bkg.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  padding: 120px 0;
+}
+
+#section-3 .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+#section-3 .grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  row-gap: 6rem;
+}
+/* ============================================
+   SECTION 4
+   ============================================*/
+
+/* Paste your styles for section 4 here from 06_data_visualizations/section4.css */
+#section-4 {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+#section-4 .grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* ============================================
+   SECTION 5
+   ============================================*/
+
+/* Paste your styles for section 5 here from 07_forests_in_cities/section5.css */
+#section-5 {
+  background-image: url(../images/section-5-bkg.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-top: 20vw;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heading-1.mega {
+  color: white;
+  font-size: 4rem;
+}
+
+#section-5 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-end;
+  border-bottom: 1px solid white;
+}
+
+.cards {
+  display: grid;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+/* ============================================
+   SECTION 6
+   ============================================*/
+
+/* Paste your styles for section 6 here from 08_carousel/section6.css */
+#section-6 {
+  background-image: url(../images/section-6-bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-top: 50px;
+  padding-bottom: 350px;
+}
+
+#section-6 .heading-1 {
+  margin: 0;
+}
+
+.carousel-card .heading-5 {
+  font-size: 1.2rem;
+}
+
+#section-6 .card {
+  width: 360px;
+}
+
+#section-6 .card .media {
+  height: 250px;
+  width: 100%;
+}
+
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
+
+/* Paste all media queries below the "regular" styles (ordering matters) */
+@media screen and (max-width: 768px) {
+   .hero h1 {
+     font-size: 2.5rem;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+   #section-1 {
+       grid-template-columns: 1fr;
+   }
+   /* TODO: Add the remaining responsive styles here */
+   #section-1 .media {
+     max-width: 100%;
+     margin-top: 0px;
+     margin-left: 0px;
+   }
+ 
+   .content-styles {
+     padding: 20px 20px;
+   }
+ }
+
+ @media screen and (max-width: 1024px) {
+   #section-2 .grid {
+       grid-template-columns: 1fr;
+       gap: 1.5rem;
+   }
+   /* TODO: Add the remaining responsive styles here */
+   #section-2 {
+     padding-bottom: 200px;
+     margin-top: 50px;
+   }
+   #section-2 .heading-1 {
+     font-size: 2.5rem;
+     padding-top: 30px;
+   }
+   #geese {
+     right: 10px; 
+     top: 10px;
+     width: 300px;
+     height: auto;
+   }
+ }
+
+ @media screen and (max-width: 1024px) {
+  #section-3 {
+      padding: 60px 0;
+  }
+  /* TODO: Add the remaining responsive styles here */
+
+  #section-3 .container {
+    grid-template-columns: 1fr;
+  }
+
+  #section-3 .grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  #section-3 .media img {
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* TODO: Add the remaining responsive styles here */
+  #section-4 .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+}
+@media screen and (max-width: 1024px) {
+  /* TODO: Add the remaining responsive styles for 1024px here */
+  .heading-1.mega {
+    color: black;
+    font-size: 3rem;
+  }
+  #section-5 {
+    background: none;
+    padding-top: 16vw;
+    padding-bottom: 200px;
+    margin-top: 50px;
+    min-height: auto;
+  }
+  #section-5 .container {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+    padding: 0 1rem;
+  }
+  .cards {
+    gap: 20px;
+  }
+  .cards article {
+    padding: 1rem;
+  }
+  .cards article h3 {
+    font-size: 1.25rem;
+  }
+  .cards article p {
+    font-size: 0.9rem;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    /* TODO: Add the remaining responsive styles for 768px here */
+    .heading-1.mega {
+      color: black;
+      font-size: 2rem;
+    }
+    #section-5 {
+      background: none;
+      padding-top: 16vw;
+      padding-bottom: 200px;
+      margin-top: 50px;
+      min-height: auto;
+    }
+    #section-5 .container {
+      grid-template-columns: 1fr;
+      gap: 0rem;
+      padding: 0 1rem;
+    }
+    .cards {
+      gap: 20px;
+    }
+    .cards article {
+      padding: 1rem;
+    }
+    .cards article h3 {
+      font-size: 1.1rem;
+    }
+    .cards article p {
+      font-size: 0.85rem;
+    }
+    }
