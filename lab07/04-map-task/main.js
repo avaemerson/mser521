@@ -77,4 +77,5 @@ function getPanelTemplate(landmark) {
       `;
 }
 
+
 generateMarkers();
